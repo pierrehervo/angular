@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-{{theme}} bg-{{theme}}">
         <a class="navbar-brand" href="#">{{title}}</a>
-        <button class="navbar-toggler" type="button>
+        <button class="navbar-toggler" type="button" (click)="toggleCollapseNavBar(isCollapsed)">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" [ngClass]= "isCollapsed ? 'show' : null" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Features</a>

@@ -12,9 +12,15 @@ export class MenuComponent implements OnInit {
 
   @Input () theme: string;
 
+  @Input () isCollapsed: boolean = false;
+
+  toggleCollapseNavBar(isCollapsed:boolean){
+    this.isCollapsed = !this.isCollapsed;
+  }
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

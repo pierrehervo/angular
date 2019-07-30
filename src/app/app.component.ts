@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { Pizza } from './models/pizza.model';
+import { PizzaService } from './pizza.service';
+ 
 
-const PIZZAS : Pizza[] = [
-  { id: 1, name: 'Reine', price: 12, image: 'queen.jpg' },
-  { id: 2, name: '4 fromages', price: 13, image: 'fromage.jpg' },
-  { id: 3, name: 'Orientale', price: 11, image: 'orientale.jpg' },
-  { id: 4, name: 'Cannibale', price: 9, image: 'cannibale.jpg' }
-]; 
 
 @Component({
   selector: 'app-root',
@@ -15,15 +11,18 @@ const PIZZAS : Pizza[] = [
 })
 
 export class AppComponent {
-  title = 'pizzaparty';
-  pizzas = PIZZAS;
-  pizza: Pizza; 
+  title = 'pizza party';
+  pizzas: Pizza[];
+  selectedPizza: Pizza; 
 
-  pizza: Pizza = {
-    id: 1,
-    name: '4 fromages',
-    price: 10,
-    image: '4-fromages.jpg'
+  //On injecte le service PizzaService dans le composant pour pouvoir l'utiliser avec this.pizzaService
+  constructor(private pizzaService: PizzaService) { }
+  
+  //Equivalent du document.ready
+  //Quand le composant est pret dans le dom, on récupère les pizzas
+  ngOnInit(){
+    this.pizzas = this.pizzaService.getPizzas();
+    console.log(this.pizzas);
   }
 
   onSelect(pizza: Pizza){
