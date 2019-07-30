@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Pizza{
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-}
+import { Pizza } from './models/pizza.model';
 
 const PIZZAS : Pizza[] = [
   { id: 1, name: 'Reine', price: 12, image: 'queen.jpg' },

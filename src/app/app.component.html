@@ -1,18 +1,17 @@
+<app-menu title="Mon application" theme="light"></app-menu>
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-
-      <div *ngIf="selectedPizza">
+      <!-- <div *ngIf="selectedPizza">
         <h2>{{selectedPizza.name}}</h2>
         <p>{{selectedPizza.price}} &euro;</p>
         <div>
           <label>name: </label>
           <input [(ngModel)]="selectedPizza.name" placeholder="name">
         </div>
-      </div>
-<!-- Remplacer la liste basique par 4colonnes Bootstrap. -->
+      </div> -->
+      <!-- TOUT CE QUI A AU DESSUS EST REMPLACE PAR: -->
+      <app-pizza [selectedPizza]="selectedPizza"></app-pizza>
+
 
   <div class="container">
     <div class="row">
