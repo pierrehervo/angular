@@ -1,31 +1,31 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pizza } from '../models/pizza.model';
+import { PizzaService } from '../pizza.service';
 
 @Component({
   selector: 'app-pizza',
   // templateUrl: './pizza.component.html',
   styleUrls: ['./pizza.component.scss'],
+  templateUrl: './pizza.component.html',
 
-  template:
-  `
-  <div *ngIf="selectedPizza">
-  <h2>{{selectedPizza.name}}</h2>
-  <p>{{selectedPizza.price}} &euro;</p>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="selectedPizza.name" placeholder="name">
-  </div>
-</div>
-` 
 })
 export class PizzaComponent implements OnInit {
 
   //On transforme selectedPizza en attribut HTML
   @Input() selectedPizza: Pizza;
 
-  constructor() { }
+  constructor(private pizzaService: PizzaService) { }
 
   ngOnInit() {
   }
 
+
+/**
+ * Cette fonctionnalité appellera le service pizza
+ * pour modifier la pizza sélectionnée
+ */
+  update() {
+    console.log(this.selectedPizza);
+    this.pizzaService.updatePizza(this.selectedPizza);
+  }
 }

@@ -1,9 +1,28 @@
 {
-    "pizza":[
-        { "id": 1, "name": "Reine", "price": 12, "image": "queen.jpg" },
-        { "id": 2, "name": "4 fromages", "price": 13, "image": "fromage.jpg" },
-        { "id": 3, "name": "Orientale", "price": 11, "image": "orientale.jpg" },
-        { "id": 4, "name": "Cannibale", "price": 9, "image": "cannibale.jpg" }
-        
-    ]
+  "pizza": [
+    {
+      "id": 1,
+      "name": "Reine",
+      "price": 12,
+      "image": "queen.jpg"
+    },
+    {
+      "id": 2,
+      "name": "4 fromages",
+      "price": 13,
+      "image": "fromage.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Orientatale",
+      "price": 11,
+      "image": "orientale.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cannibale",
+      "price": 9,
+      "image": "cannibale.jpg"
+    }
+  ]
 }

@@ -33,4 +33,14 @@ export class PizzaService {
       response => response as Pizza
     );
   }
+
+  /**
+   * Permet de modifier une pizza sur notre API
+   */
+  updatePizza(pizza: Pizza)  {
+    //LA méthode PUT de HTTP est la même que POST, permet de mettre à jour un éléement
+    //Le 1er argument (aka pizza.id) de put  est l'URL de l'API
+    //Le 2eme argument (pizza) est l'objet à mettre à jour
+    return this.http.put('http://localhost:3000/pizza/'+pizza.id, pizza).toPromise().then((response) => response);
+  }
 }
