@@ -21,7 +21,7 @@ export class PizzaSingleComponent implements OnInit {
     //Equivalent d'un $_GET['id'] en PHP
     this.id = this.route.snapshot.params.id;
     //On récupere la pizza de la route actuelle
-    this.pizza = this.pizzaService.getOnePizza(this.id);
+    this.pizzaService.getOnePizza(this.id).then(pizza => this.pizza = pizza);
   }
 
 }

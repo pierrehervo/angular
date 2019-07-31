@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
@@ -24,6 +25,7 @@ import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'pizzas', component: PizzasComponent},
       { path: '', component: FrontComponent},
