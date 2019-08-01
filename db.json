@@ -2,13 +2,13 @@
   "pizza": [
     {
       "id": 1,
-      "name": "Reine",
+      "name": "Reinee",
       "price": 12,
       "image": "queen.jpg"
     },
     {
       "id": 2,
-      "name": "4 fromages",
+      "name": "mille fromages",
       "price": 13,
       "image": "fromage.jpg"
     },
@@ -23,6 +23,42 @@
       "name": "Cannibale",
       "price": 9,
       "image": "cannibale.jpg"
+    },
+    {
+      "name": "miamiam",
+      "price": "4",
+      "image": "reine.jpg",
+      "id": 5
+    },
+    {
+      "name": "miamiam",
+      "price": "4",
+      "image": "reine.jpg",
+      "id": 6
+    },
+    {
+      "name": "miamiam",
+      "price": "4",
+      "image": "reine.jpg",
+      "id": 7
+    },
+    {
+      "name": "miamiam",
+      "price": "4",
+      "image": "reine.jpg",
+      "id": 8
+    },
+    {
+      "name": "miamiam",
+      "price": "4",
+      "image": "queen.jpg",
+      "id": 9
+    },
+    {
+      "name": "trobonsuper",
+      "price": "2",
+      "image": "queen.jpg",
+      "id": 10
     }
   ]
 }

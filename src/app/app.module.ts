@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { FrontComponent } from './front/front.component';
 import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
+import { PizzaCreateComponent } from './pizza-create/pizza-create.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
     MenuComponent,
     PizzasComponent,
     FrontComponent,
-    PizzaSingleComponent
+    PizzaSingleComponent,
+    PizzaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,9 @@ import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
     RouterModule.forRoot([
       { path: 'pizzas', component: PizzasComponent},
       { path: '', component: FrontComponent},
+      { path: 'pizza/create', component: PizzaCreateComponent},
       { path: 'pizza/:id', component: PizzaSingleComponent }
+      
     ])
   ],
   providers: [],

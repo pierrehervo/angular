@@ -1,0 +1,16 @@
+<div class="form-group">
+    <label for="name">nom</label>
+    <input class="form-control" type="text" id="name" [(ngModel)]="pizza.name">
+</div>
+
+<div>
+    <label for="price">price</label>
+    <input class="form-control" type="text" id="price" [(ngModel)]="pizza.price">
+</div>
+
+<div>
+    <label for="image">Image :</label>
+    <input class="form-control" type="text" id="image" [(ngModel)]="pizza.image">
+</div>
+
+<button class="btn btn-primary mt-3" (click)="save()">ajouter</button>

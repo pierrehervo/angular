@@ -27,5 +27,9 @@ export class PizzaComponent implements OnInit {
   update() {
     console.log(this.selectedPizza);
     this.pizzaService.updatePizza(this.selectedPizza);
+    //Masquer le formulaire
+    this.selectedPizza = null;
   }
+  
+
 }
