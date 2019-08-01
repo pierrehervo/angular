@@ -27,30 +27,6 @@
     {
       "name": "miamiam",
       "price": "4",
-      "image": "reine.jpg",
-      "id": 5
-    },
-    {
-      "name": "miamiam",
-      "price": "4",
-      "image": "reine.jpg",
-      "id": 6
-    },
-    {
-      "name": "miamiam",
-      "price": "4",
-      "image": "reine.jpg",
-      "id": 7
-    },
-    {
-      "name": "miamiam",
-      "price": "4",
-      "image": "reine.jpg",
-      "id": 8
-    },
-    {
-      "name": "miamiam",
-      "price": "4",
       "image": "queen.jpg",
       "id": 9
     },
@@ -59,6 +35,12 @@
       "price": "2",
       "image": "queen.jpg",
       "id": 10
+    },
+    {
+      "name": "Queen",
+      "price": "1million de dollards",
+      "image": "reine.jpg",
+      "id": 11
     }
   ]
 }

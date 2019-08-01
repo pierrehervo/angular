@@ -64,4 +64,12 @@ export class PizzaService {
   createPizza (pizza: Pizza) {
     return this.http.post('http://localhost:3000/pizza', pizza).toPromise().then((response) => response);
   }
+
+
+  /**
+   * Permet de supprimer une pizza
+   */
+  deletePizza(pizza: Pizza){
+    return this.http.delete('http://localhost:3000/pizza/'+pizza.id).toPromise().then((response) => response);
+  }
 }

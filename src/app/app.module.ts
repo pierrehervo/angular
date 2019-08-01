@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {FormsModule} from '@angular/forms';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +30,7 @@ import { PizzaCreateComponent } from './pizza-create/pizza-create.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    NgbModule,
     RouterModule.forRoot([
       { path: 'pizzas', component: PizzasComponent},
       { path: '', component: FrontComponent},
