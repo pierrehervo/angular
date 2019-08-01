@@ -1,12 +1,6 @@
 {
   "pizza": [
     {
-      "id": 1,
-      "name": "Reinee",
-      "price": 12,
-      "image": "queen.jpg"
-    },
-    {
       "id": 2,
       "name": "mille fromages",
       "price": 13,

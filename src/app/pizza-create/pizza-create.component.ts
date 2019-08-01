@@ -22,7 +22,7 @@ export class PizzaCreateComponent implements OnInit {
   save() {
     this.pizzaService.createPizza(this.pizza).then(pizza => {
 
-        this.pizza = pizza;
+        //
         this.location.back();
       }
     )
