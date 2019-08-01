@@ -1,0 +1,16 @@
+<div class="form-group">
+    <label for="email">Votre adresse mail</label>
+    <input class="form-control" type="text" id="email" [(ngModel)]="user.email">
+</div>
+
+<div>
+    <label for="password">Mot de passe</label>
+    <input class="form-control" type="password" id="password" [(ngModel)]="user.password">
+</div>
+
+<div class="alert alert-danger" *ngIf="message">
+    {{message}}
+</div>
+
+<button class="btn btn-primary mt-3" (click)="register()">S'inscrire</button>
+

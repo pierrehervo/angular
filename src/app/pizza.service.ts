@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Pizza } from './models/pizza.model';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
+  apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
+//API en prod
+//http://my-json-server.typicode.com/pierrehervo/angular/pizza
+
+  //API en local
+  //http://localhost:3000/pizza
 
   /**
    * Permet de récupérer toutes les pizzas du site
@@ -19,7 +26,7 @@ export class PizzaService {
     //Angular renvoie par défaut un observable mais on le convertit en promesse avec toPromise()
     //Quand la promesse est recue (then...), on renvoie les pizzas de l'API
     //as Pizza[] permet juste de tricher sur le type renvoyé par la fonction
-    return this.http.get('http://localhost:3000/pizza').toPromise().then(
+    return this.http.get(this.apiUrl+'/pizza').toPromise().then(
       response => response as Pizza[]
     );
   }
@@ -33,7 +40,7 @@ export class PizzaService {
     //on va chercher dans le tableau PIZZAS la pizza qui contient l'id passé en paramètre
     //AU FAITE 2 == 2 renvoie true car la valeur est la même
     //MAIS 2 === 2 renvoie faux car le type n'est pas le même
-    return this.http.get('http://localhost:3000/pizza/'+id).toPromise().then(
+    return this.http.get(this.apiUrl+'/pizza/'+id).toPromise().then(
       response => response as Pizza
     );
   }
@@ -46,7 +53,7 @@ export class PizzaService {
     //LA méthode PUT de HTTP est la même que POST, permet de mettre à jour un élement
     //Le 1er argument (aka pizza.id) de put  est l'URL de l'API
     //Le 2eme argument (pizza) est l'objet à mettre à jour
-    return this.http.put('http://localhost:3000/pizza/'+pizza.id, pizza).toPromise().then((response) => response);
+    return this.http.put(this.apiUrl+'/pizza/'+pizza.id, pizza).toPromise().then((response) => response);
   }
 
 
@@ -62,7 +69,7 @@ export class PizzaService {
  *7) On masquera le formulaire apres la sauvegarde
  */ 
   createPizza (pizza: Pizza) {
-    return this.http.post('http://localhost:3000/pizza', pizza).toPromise().then((response) => response);
+    return this.http.post(this.apiUrl+'/pizza', pizza).toPromise().then((response) => response);
   }
 
 
@@ -70,6 +77,6 @@ export class PizzaService {
    * Permet de supprimer une pizza
    */
   deletePizza(pizza: Pizza){
-    return this.http.delete('http://localhost:3000/pizza/'+pizza.id).toPromise().then((response) => response);
+    return this.http.delete(this.apiUrl+'/pizza/'+pizza.id).toPromise().then((response) => response);
   }
 }
